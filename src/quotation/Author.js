@@ -28,7 +28,7 @@ class Author extends React.Component {
     const { classes } = this.props
     return (
       <CardContent className={classes.cardContent}>
-        <Typography variant="h4">{'- “ ' + this.props.author + ' ”'}</Typography>
+        <Typography variant="h4">{'- ' + this.props.author }</Typography>
       </CardContent>
     );
   }
