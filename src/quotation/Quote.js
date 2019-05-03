@@ -1,14 +1,41 @@
+// librairies
+
 import React from 'react';
+
+// CSS
+
 import '../App.css';
 
-export default class Quote extends React.Component {
+
+// Material-ui
+
+import Typography from '@material-ui/core/Typography';
+import CardContent from '@material-ui/core/CardContent';
+import { withStyles } from '@material-ui/core/styles';
+
+// Variables 
+
+const styles = {
+  cardContent: {
+    padding: "10rem",
+  }
+}
+
+/////////////////////
+
+class Quote extends React.Component {
 
 
   render() {
+
+    const { classes } = this.props;
+
     return (
-      <div className="Quotation__quote">
-        <p>{this.props.quote}</p>
-      </div>
+      <CardContent className={classes.cardContent}>
+        <Typography variant="h1" component="p">{this.props.quote}</Typography>
+      </CardContent>
     );
   }
 }
+
+export default withStyles(styles)(Quote);
