@@ -1,4 +1,6 @@
-# Critères qualité
+# Quote generator
+
+## Critères qualité
 
 - React only => Zéro manipulation native DOM !!!
 - Framework CSS : Au choix (Bulma)
