@@ -1,3 +1,16 @@
+# Critères qualité
+
+- React only => Zéro manipulation native DOM !!!
+- Framework CSS : Au choix (Bulma)
+- Les citations sont écrites en dur 
+- Un bouton « Nouvelle Citation » qui en génère aléatoirement 1
+
+## Used
+
+- Librarie React + Create react App
+- Framework Material UI
+- Axios with gist
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
