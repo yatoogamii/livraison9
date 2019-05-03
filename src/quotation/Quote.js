@@ -32,7 +32,7 @@ class Quote extends React.Component {
 
     return (
       <CardContent className={classes.cardContent}>
-        <Typography variant="h1" component="p">{this.props.quote}</Typography>
+        <Typography variant="h3" component="p">{this.props.quote}</Typography>
       </CardContent>
     );
   }
