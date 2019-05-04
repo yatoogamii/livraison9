@@ -49,16 +49,9 @@ const styles = theme => ( {
 class Quotation extends React.Component {
 
   state = {
-    quotes: [
-      " On attend pas kenny ?", 
-      "C'est pas Vim way ça", 
-      "Bon weekend", 
-      "Répondez pas tous en même temps", 
-      "je vais peut être être papa", 
-      "On fait le pont vendredi ?", 
-      "Une p'tite bière ?"
-    ], 
+    quotes: [], 
     author: '',
+    animatedQuote: "animated slideInRight"
   };
 
   componentDidMount() {
@@ -66,7 +59,21 @@ class Quotation extends React.Component {
   }
 
   nextQuote() {
-    this.getNewQuote();
+    this.animatedIn();
+    this.getNewQuote()
+  }
+
+  animatedIn() {
+    if (this.state.animatedQuote === 'animated slideInRight') {
+      this.setState({
+        animatedQuote: "animated slideInLeft"
+      });
+    } 
+    else {
+      this.setState({
+        animatedQuote: "animated slideInRight"
+      });
+    }
   }
 
   getNewQuote() {
@@ -82,12 +89,12 @@ class Quotation extends React.Component {
     const { classes } = this.props;
     return (
       <div className="container">
-      <Icon></Icon>
-      <Card className={classes.card}>
-        <Quote quote={this.state.quotes.quote}></Quote>
-        <Author author={this.state.quotes.author}></Author>
-        <Btn className={classes.btn} onClick={() => this.nextQuote()}></Btn>
-      </Card>
+        <Icon></Icon>
+        <Card className={classes.card}>
+          <Quote quote={this.state.quotes.quote} animated={this.state.animatedQuote}></Quote>
+          <Author author={this.state.quotes.author}></Author>
+          <Btn className={classes.btn} onClick={() => this.nextQuote()}></Btn>
+        </Card>
       </div>
     );
   }

@@ -31,7 +31,7 @@ class Quote extends React.Component {
     const { classes } = this.props;
 
     return (
-      <CardContent className={classes.cardContent}>
+      <CardContent style={{padding: 10 + "rem"}} className={this.props.animated}>
         <Typography variant="h3" component="p">{this.props.quote}</Typography>
       </CardContent>
     );

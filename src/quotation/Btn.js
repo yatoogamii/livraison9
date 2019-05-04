@@ -9,7 +9,6 @@ import '../App.css';
 
 // Material-ui
 
-import { withStyles } from '@material-ui/core/styles';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 
