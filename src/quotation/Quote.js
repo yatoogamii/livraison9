@@ -11,15 +11,6 @@ import '../App.css';
 
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
-import { withStyles } from '@material-ui/core/styles';
-
-// Variables 
-
-const styles = {
-  cardContent: {
-    padding: "10rem",
-  }
-}
 
 /////////////////////
 
@@ -27,8 +18,6 @@ class Quote extends React.Component {
 
 
   render() {
-
-    const { classes } = this.props;
 
     return (
       <CardContent style={{padding: 10 + "rem"}} className={this.props.animated}>
@@ -38,4 +27,4 @@ class Quote extends React.Component {
   }
 }
 
-export default withStyles(styles)(Quote);
+export default Quote
