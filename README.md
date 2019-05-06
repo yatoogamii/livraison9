@@ -1,3 +1,6 @@
+
+![my quotation](src/assets/img/quotation.png)
+
 # Quote generator
 
 ## Critères qualité
